@@ -991,25 +991,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <iframe id="chat" style="width: 400px; height: 400px;" src=''></iframe>
+  <iframe src="https://web.powerva.microsoft.com/environments/Default-73e2dc65-e18d-4421-8da7-e96d82b63aae/bots/new_bot_3ca68c6773a64d56b9fc3063cd8e8797/webchat" frameborder="0" style="width: 100%; height: 100%;"></iframe>
 
 </body>
 
-<script>
-
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
-  xhr.setRequestHeader('Authorization', 'BotConnector ' + 'YOUR SECRET HERE');
-  xhr.send();
-  xhr.onreadystatechange = processRequest;
-
-  function processRequest(e) {
-    if (xhr.readyState == 4  && xhr.status == 200) {
-      var response = JSON.parse(xhr.responseText);
-      document.getElementById("chat").src="https://webchat.botframework.com/embed/<botname>?t="+response
-    }
-  }
-
-</script>
 
 </html>
